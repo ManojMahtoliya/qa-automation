@@ -7,7 +7,6 @@ public class Main {
     public static WebDriver driver;
 
     public static void initializeDriver() {
-        // Absolute path to the chromedriver.exe
         String chromeDriverPath = "src\\main\\driver\\chromedriver.exe";
         System.setProperty("webdriver.chrome.driver", chromeDriverPath);
         driver = new ChromeDriver();
