@@ -1,8 +1,11 @@
 
 import org.example.Main;
+import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
+
+import static org.example.Main.driver;
 
 public class AutomationDemo {
 
@@ -12,13 +15,9 @@ public class AutomationDemo {
     }
 
     @Test
-    public void testOpenGoogle() {
-        Main.openGoogle();
-    }
-
-    @Test
-    public void testOpenBing() {
-        Main.openBing();
+    public void testOpenDemoQAWebsite() {
+        driver.get("https://demoqa.com/");
+        Assert.assertTrue(Main.demoQaHeader.isDisplayed());  //check header visible
     }
 
     @AfterClass
